@@ -39,14 +39,6 @@ rm -rf feeds/packages/net/onionshare-cli
 rm -rf feeds/luci/applications/luci-app-appfilter
 rm -rf feeds/packages/net/open-app-filter
 
-# 清理所有临时缓存和索引 (让系统自动重建，而不是手动删行)
-# 这会清除所有 feeds 的 .tmp 目录，强制系统在下次 update 时重新扫描
-# 如果有其他自定义 feed，也建议清理对应的 .tmp 目录
-rm -rf feeds/luci.tmp
-rm -rf feeds/packages.tmp
-# rm -rf feeds/base.tmp
-
-
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
   branch="$1" repourl="$2" && shift 2
@@ -74,6 +66,13 @@ git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon feeds/luci/the
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config feeds/luci/applications/luci-app-argon-config
 git clone --depth=1 https://github.com/eamonxg/luci-theme-aurora feeds/luci/themes/luci-theme-aurora
 git clone --depth=1 https://github.com/eamonxg/luci-app-aurora-config feeds/luci/applications/luci-app-aurora-config
+
+# 清理所有临时缓存和索引 (让系统自动重建，而不是手动删行)
+# 这会清除所有 feeds 的 .tmp 目录，强制系统在下次 update 时重新扫描
+# 如果有其他自定义 feed，也建议清理对应的 .tmp 目录
+rm -rf feeds/luci.tmp
+rm -rf feeds/packages.tmp
+# rm -rf feeds/base.tmp
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
