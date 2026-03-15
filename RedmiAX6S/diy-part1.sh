@@ -16,8 +16,8 @@
 # Add a feed source
 #echo 'src-git passwall2 https://github.com/Openwrt-Passwall/openwrt-passwall2.git' >>feeds.conf.default
 #echo 'src-git passwall_packages https://github.com/Openwrt-Passwall/openwrt-passwall-packages.git' >>feeds.conf.default
-echo 'src-git gecoosac https://github.com/lyin888/openwrt-gecoosac.git' >>feeds.conf.default
-echo 'src-git aliyundrive_webdav https://github.com/messense/aliyundrive-webdav.git' >>feeds.conf.default
-echo 'src-git lyin_diy https://github.com/lyin888/lyin_diy.git' >>feeds.conf.default
+#echo 'src-git gecoosac https://github.com/lyin888/openwrt-gecoosac.git' >>feeds.conf.default
+#echo 'src-git aliyundrive_webdav https://github.com/messense/aliyundrive-webdav.git' >>feeds.conf.default
+#echo 'src-git lyin_diy https://github.com/lyin888/lyin_diy.git' >>feeds.conf.default
 echo 'src-git OpenAppFilter https://github.com/destan19/OpenAppFilter.git' >>feeds.conf.default
 echo 'src-git rtp2httpd https://github.com/stackia/rtp2httpd.git' >>feeds.conf.default
