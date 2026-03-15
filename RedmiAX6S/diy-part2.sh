@@ -39,7 +39,7 @@ rm -rf feeds/packages/net/onionshare-cli
 rm -rf feeds/luci/applications/luci-app-appfilter
 rm -rf feeds/packages/net/open-app-filter
 
-# 2. 清理所有临时缓存和索引 (让系统自动重建，而不是手动删行)
+# 清理所有临时缓存和索引 (让系统自动重建，而不是手动删行)
 # 这会清除所有 feeds 的 .tmp 目录，强制系统在下次 update 时重新扫描
 # 如果有其他自定义 feed，也建议清理对应的 .tmp 目录
 rm -rf feeds/luci.tmp
@@ -58,16 +58,16 @@ function git_sparse_clone() {
 }
 
 # # 添加额外插件
-git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-adguardhome
-git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-wrtbwmon  wrtbwmon
-git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-netspeedtest
-git_sparse_clone main https://github.com/kiddin9/op-packages homebox
-git_sparse_clone main https://github.com/kiddin9/op-packages ookla-speedtest
-git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-turboacc
-git_sparse_clone main https://github.com/kiddin9/op-packages shortcut-fe
-git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-easytier easytier
-git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-taskplan
-git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-timedreboot
+#git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-adguardhome
+#git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-wrtbwmon  wrtbwmon
+#git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-netspeedtest
+#git_sparse_clone main https://github.com/kiddin9/op-packages homebox
+#git_sparse_clone main https://github.com/kiddin9/op-packages ookla-speedtest
+#git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-turboacc
+#git_sparse_clone main https://github.com/kiddin9/op-packages shortcut-fe
+#git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-easytier easytier
+#git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-taskplan
+#git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-timedreboot
 
 # 安装主题
 git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon feeds/luci/themes/luci-theme-argon
