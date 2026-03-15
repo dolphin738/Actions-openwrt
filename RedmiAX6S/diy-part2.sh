@@ -36,6 +36,16 @@ sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-argon-config
 rm -rf feeds/packages/net/onionshare-cli
+rm -rf feeds/luci/applications/luci-app-appfilter
+rm -rf feeds/packages/net/open-app-filter
+
+# 2. 清理所有临时缓存和索引 (让系统自动重建，而不是手动删行)
+# 这会清除所有 feeds 的 .tmp 目录，强制系统在下次 update 时重新扫描
+# 如果有其他自定义 feed，也建议清理对应的 .tmp 目录
+rm -rf feeds/luci.tmp
+rm -rf feeds/packages.tmp
+rm -rf feeds/base.tmp
+
 
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
