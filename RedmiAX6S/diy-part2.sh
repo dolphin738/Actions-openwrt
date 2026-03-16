@@ -11,7 +11,7 @@
 #
 
 # 修改默认IP & 固件名称 & 编译署名和时间
-sed -i 's/192.168.1.1/192.168.2.254/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.2.254/g' package/base-files/files/bin/config_generate
 sed -i "s/hostname='.*'/hostname='RedmiAX6S'/g" package/base-files/files/bin/config_generate
 sed -i "s#_('Firmware Version'), (L\.isObject(boardinfo\.release) ? boardinfo\.release\.description + ' / ' : '') + (luciversion || ''),# \
             _('Firmware Version'),\n \
