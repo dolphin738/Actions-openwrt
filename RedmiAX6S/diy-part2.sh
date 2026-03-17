@@ -50,16 +50,13 @@ function git_sparse_clone() {
 }
 
 # # 添加额外插件
-#git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-adguardhome
-#git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-wrtbwmon  wrtbwmon
-#git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-netspeedtest
-#git_sparse_clone main https://github.com/dolphin738/op-packages homebox
-#git_sparse_clone main https://github.com/dolphin738/op-packages ookla-speedtest
-#git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-turboacc
-#git_sparse_clone main https://github.com/dolphin738/op-packages shortcut-fe
-#git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-easytier easytier
-#git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-taskplan
-#git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-timedreboot
+git clone --depth=1 https://github.com/stackia/rtp2httpd package/rtp2httpd
+git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-wrtbwmon  wrtbwmon
+git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-netspeedtest homebox ookla-speedtest
+git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-turboacc shortcut-fe
+git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-easytier easytier
+git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-taskplan
+git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-timedreboot
 
 # # 修改默认设置
 #git_sparse_clone main https://github.com/dolphin738/op-packages files
