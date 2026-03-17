@@ -64,7 +64,7 @@ function git_sparse_clone() {
 # # 修改默认设置
 #git_sparse_clone main https://github.com/dolphin738/op-packages files
 #mv -f package/files ./ && rm -rf files/etc/opkg/customfeeds.conf
-sed -i "s|'https://mirrors.vsean.net/openwrt'|'https://mirrors.pku.edu.cn/immortalwrt'|g" package/emortal/default-settings/files/99-default-settings-chinese
+sed -i 's|opkg_mirror="https://mirrors.vsean.net/openwrt"|opkg_mirror="https://mirrors.pku.edu.cn/immortalwrt"|g' package/emortal/default-settings/files/99-default-settings-chinese
 sed -i 's|zram_comp_algo="lzo"|zram_comp_algo="zstd"|g' package/system/zram-swap/files/zram.init
 
 # 安装主题
