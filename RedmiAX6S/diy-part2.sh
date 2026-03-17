@@ -66,7 +66,7 @@ function git_sparse_clone() {
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config feeds/luci/applications/luci-app-argon-config
 #git clone --depth=1 https://github.com/eamonxg/luci-theme-aurora feeds/luci/themes/luci-theme-aurora
 #git clone --depth=1 https://github.com/eamonxg/luci-app-aurora-config feeds/luci/applications/luci-app-aurora-config
-git clone --depth=1 https://github.com/gngpp/luci-theme-design.git package/luci-theme-design
+git clone --depth=1 https://github.com/papagaye744/luci-theme-design.git package/luci-theme-design
 git clone --depth=1 https://github.com/gngpp/luci-app-design-config.git package/luci-app-design-config
 
 # 清理所有临时缓存和索引 (让系统自动重建，而不是手动删行)
