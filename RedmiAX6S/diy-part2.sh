@@ -62,8 +62,9 @@ function git_sparse_clone() {
 #git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-timedreboot
 
 # # 修改源
-git_sparse_clone main https://github.com/dolphin738/op-packages files
-mv -f package/files ./ && rm -rf files/etc/opkg/customfeeds.conf
+#git_sparse_clone main https://github.com/dolphin738/op-packages files
+#mv -f package/files ./ && rm -rf files/etc/opkg/customfeeds.conf
+sed -i "s|'https://mirrors.vsean.net/openwrt'|'https://mirrors.pku.edu.cn/immortalwrt'|g" package/emortal/default-settings/files/99-default-settings-chinese
 
 # 安装主题
 #git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon feeds/luci/themes/luci-theme-argon
