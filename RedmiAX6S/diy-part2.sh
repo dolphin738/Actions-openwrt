@@ -64,8 +64,10 @@ function git_sparse_clone() {
 # 安装主题
 #git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon feeds/luci/themes/luci-theme-argon
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config feeds/luci/applications/luci-app-argon-config
-git clone --depth=1 https://github.com/eamonxg/luci-theme-aurora feeds/luci/themes/luci-theme-aurora
-git clone --depth=1 https://github.com/eamonxg/luci-app-aurora-config feeds/luci/applications/luci-app-aurora-config
+#git clone --depth=1 https://github.com/eamonxg/luci-theme-aurora feeds/luci/themes/luci-theme-aurora
+#git clone --depth=1 https://github.com/eamonxg/luci-app-aurora-config feeds/luci/applications/luci-app-aurora-config
+git clone --depth=1 https://github.com/gngpp/luci-theme-design.git package/luci-theme-design
+git clone --depth=1 https://github.com/gngpp/luci-app-design-config.git package/luci-app-design-config
 
 # 清理所有临时缓存和索引 (让系统自动重建，而不是手动删行)
 # 这会清除所有 feeds 的 .tmp 目录，强制系统在下次 update 时重新扫描
