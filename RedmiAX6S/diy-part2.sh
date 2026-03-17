@@ -63,15 +63,15 @@ git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-timedre
 #mv -f package/files ./ && rm -rf files/etc/opkg/customfeeds.conf
 sed -i 's|opkg_mirror="https://mirrors.vsean.net/openwrt"|opkg_mirror="https://mirrors.pku.edu.cn/immortalwrt"|g' package/emortal/default-settings/files/99-default-settings-chinese
 sed -i 's|zram_comp_algo="lzo"|zram_comp_algo="zstd"|g' package/system/zram-swap/files/zram.init
-sed -i 's|bootstrap|design|g' feeds/luci/modules/luci-base/root/etc/config/luci
+sed -i 's|bootstrap|kucat|g' feeds/luci/modules/luci-base/root/etc/config/luci
 
 # 安装主题
 #git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon feeds/luci/themes/luci-theme-argon
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config feeds/luci/applications/luci-app-argon-config
 #git clone --depth=1 https://github.com/eamonxg/luci-theme-aurora feeds/luci/themes/luci-theme-aurora
 #git clone --depth=1 https://github.com/eamonxg/luci-app-aurora-config feeds/luci/applications/luci-app-aurora-config
-#git clone --depth=1 https://github.com/papagaye744/luci-theme-design.git package/luci-theme-design
-#git clone --depth=1 https://github.com/gngpp/luci-app-design-config.git package/luci-app-design-config
+git clone --depth=1 https://github.com/papagaye744/luci-theme-design.git package/luci-theme-design
+git clone --depth=1 https://github.com/gngpp/luci-app-design-config.git package/luci-app-design-config
 git clone --depth=1 https://github.com/sirpdboy/luci-theme-kucat.git package/luci-theme-design
 git clone --depth=1 https://github.com/sirpdboy/luci-app-kucat-config.git package/luci-app-kucat-config
 git clone --depth=1 https://github.com/derisamedia/luci-theme-alpha-reborn.git package/luci-theme-alpha-reborn
