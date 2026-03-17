@@ -38,6 +38,8 @@ sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.
 rm -rf feeds/packages/net/onionshare-cli
 rm -rf feeds/luci/applications/luci-app-appfilter
 rm -rf feeds/packages/net/open-app-filter
+rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
+rm -rf feeds/luci/applications/luci-app-passwall
 
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
@@ -57,6 +59,8 @@ git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-turboac
 git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-easytier easytier
 git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-taskplan
 git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-timedreboot
+git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall-packages package/passwall-packages
+git_sparse_clone main https://github.com/Openwrt-Passwall/openwrt-passwall luci-app-passwall
 
 # # 修改默认设置
 #git_sparse_clone main https://github.com/dolphin738/op-packages files
