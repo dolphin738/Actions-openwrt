@@ -61,6 +61,10 @@ function git_sparse_clone() {
 #git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-taskplan
 #git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-timedreboot
 
+# # 修改源
+git_sparse_clone main https://github.com/dolphin738/op-packages files
+mv -f package/files ./ && rm -rf files/etc/opkg/customfeeds.conf
+
 # 安装主题
 #git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon feeds/luci/themes/luci-theme-argon
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config feeds/luci/applications/luci-app-argon-config
