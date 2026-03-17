@@ -74,8 +74,8 @@ sed -i 's|bootstrap|kucat|g' feeds/luci/modules/luci-base/root/etc/config/luci
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config feeds/luci/applications/luci-app-argon-config
 #git clone --depth=1 https://github.com/eamonxg/luci-theme-aurora feeds/luci/themes/luci-theme-aurora
 #git clone --depth=1 https://github.com/eamonxg/luci-app-aurora-config feeds/luci/applications/luci-app-aurora-config
-git clone --depth=1 https://github.com/papagaye744/luci-theme-design.git package/luci-theme-design
-git clone --depth=1 https://github.com/gngpp/luci-app-design-config.git package/luci-app-design-config
+#git clone --depth=1 https://github.com/papagaye744/luci-theme-design.git package/luci-theme-design
+#git clone --depth=1 https://github.com/gngpp/luci-app-design-config.git package/luci-app-design-config
 git clone --depth=1 https://github.com/sirpdboy/luci-theme-kucat.git package/luci-theme-kucat
 git clone --depth=1 https://github.com/sirpdboy/luci-app-kucat-config.git package/luci-app-kucat-config
 git clone --depth=1 https://github.com/derisamedia/luci-theme-alpha-reborn.git package/luci-theme-4lpha
