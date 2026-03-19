@@ -68,7 +68,7 @@ git_sparse_clone main https://github.com/Openwrt-Passwall/openwrt-passwall luci-
 #mv -f package/files ./ && rm -rf files/etc/opkg/customfeeds.conf
 sed -i 's|opkg_mirror="https://mirrors.vsean.net/openwrt"|opkg_mirror="https://mirrors.pku.edu.cn/immortalwrt"|g' package/emortal/default-settings/files/99-default-settings-chinese
 #sed -i 's|zram_comp_algo="lzo"|zram_comp_algo="zstd"|g' package/system/zram-swap/files/zram.init
-#sed -i 's|bootstrap|kucat|g' feeds/luci/modules/luci-base/root/etc/config/luci
+sed -i 's|bootstrap|kucat|g' feeds/luci/modules/luci-base/root/etc/config/luci
 
 # 安装主题
 #git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon feeds/luci/themes/luci-theme-argon
