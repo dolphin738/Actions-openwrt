@@ -59,7 +59,8 @@ git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-turboac
 git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-easytier easytier
 git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-taskplan
 git_sparse_clone main https://github.com/dolphin738/op-packages luci-app-timedreboot
-git_sparse_clone main https://github.com/dolphin738/op-packages files
+git_sparse_clone main https://github.com/dolphin738/op-packages file
+mv -f package/files files && rm  -rf files/opkg
 git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall-packages package/passwall-packages
 git_sparse_clone main https://github.com/Openwrt-Passwall/openwrt-passwall luci-app-passwall
 
