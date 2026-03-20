@@ -77,13 +77,13 @@ UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-timewol luci-ap
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 UPDATE_PACKAGE "rtp2httpd" "stackia/rtp2httpd" "main" "" "luci-app-rtp2httpd"
 UPDATE_PACKAGE "dolphin738" "dolphin738/op-packages" "main" "" "luci-app-wrtbwmon  wrtbwmon luci-app-turboacc fast-classifier shortcut-fe luci-app-taskplan luci-app-timedreboot"
-FILE_LIST=("luci-app-wrtbwmon" "wrtbwmon" "luci-app-turboacc" "shortcut-fe" "luci-app-taskplan" "luci-app-timedreboot" "files")
+FILE_LIST=("luci-app-wrtbwmon" "wrtbwmon" "luci-app-turboacc" "shortcut-fe" "luci-app-taskplan" "luci-app-timedreboot")
+mkdir -p files/etc/config/
+mv -f op-packages/files/etc/config/kucat files/etc/config/
 for N in "${FILE_LIST[@]}"; do
-	# 查找匹配的目录
-	echo "$N"
-	mv -f op-packages/$N ./
+	mv -f op-packages/$N ./ 
 done
-rm -rf op-packages && rm -rf files/etc/opkg/customfeeds.conf
+rm -rf op-packages
 UPDATE_PACKAGE "luci-app-netwizard" "sirpdboy/luci-app-netwizard" "main"
 UPDATE_PACKAGE "openwrt-bandix" "timsaya/openwrt-bandix" "main"
 UPDATE_PACKAGE "luci-app-bandix" "timsaya/luci-app-bandix" "main"
