@@ -56,7 +56,7 @@ UPDATE_PACKAGE "momo" "nikkinikki-org/OpenWrt-momo" "main"
 UPDATE_PACKAGE "nikki" "nikkinikki-org/OpenWrt-nikki" "main"
 UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev" "pkg"
 UPDATE_PACKAGE "passwall" "Openwrt-Passwall/openwrt-passwall" "main" "pkg"
-UPDATE_PACKAGE "passwall" "Openwrt-Passwall/openwrt-passwall-packages" "main"
+UPDATE_PACKAGE "passwall-packages" "Openwrt-Passwall/openwrt-passwall-packages" "main"
 UPDATE_PACKAGE "passwall2" "Openwrt-Passwall/openwrt-passwall2" "main" "pkg"
 
 UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
@@ -81,6 +81,8 @@ UPDATE_PACKAGE "turboacc" "dolphin738/op-packages" "main" "" "luci-app-turboacc 
 UPDATE_PACKAGE "taskplan" "dolphin738/op-packages" "main" "" "luci-app-taskplan"
 UPDATE_PACKAGE "timedreboot" "dolphin738/op-packages" "main" "" "luci-app-timedreboot"
 UPDATE_PACKAGE "netwizard" "sirpdboy/luci-app-netwizard" "main"
+UPDATE_PACKAGE "openwrt-bandix" "timsaya/openwrt-bandix" "main"
+UPDATE_PACKAGE "bandix" "timsaya/luci-app-bandix" "main"
 
 
 #更新软件包版本
