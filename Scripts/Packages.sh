@@ -78,15 +78,15 @@ UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 UPDATE_PACKAGE "rtp2httpd" "stackia/rtp2httpd" "main" "" "luci-app-rtp2httpd"
 UPDATE_PACKAGE "dolphin738" "dolphin738/op-packages" "main" "" "luci-app-wrtbwmon  wrtbwmon luci-app-turboacc fast-classifier shortcut-fe luci-app-taskplan luci-app-timedreboot"
 FILE_LIST=("luci-app-wrtbwmon" "wrtbwmon" "luci-app-turboacc" "shortcut-fe" "luci-app-taskplan" "luci-app-timedreboot")
+UPDATE_PACKAGE "luci-app-netwizard" "sirpdboy/luci-app-netwizard" "main"
+UPDATE_PACKAGE "openwrt-bandix" "timsaya/openwrt-bandix" "main"
+UPDATE_PACKAGE "luci-app-bandix" "timsaya/luci-app-bandix" "main"
 #mkdir -p files/etc/config/
 #mv -f op-packages/files/etc/config/kucat files/etc/config/
 for N in "${FILE_LIST[@]}"; do
 	mv -f op-packages/$N ./ 
 done
 rm -rf op-packages
-UPDATE_PACKAGE "luci-app-netwizard" "sirpdboy/luci-app-netwizard" "main"
-UPDATE_PACKAGE "openwrt-bandix" "timsaya/openwrt-bandix" "main"
-UPDATE_PACKAGE "luci-app-bandix" "timsaya/luci-app-bandix" "main"
 
 
 #更新软件包版本
@@ -131,5 +131,5 @@ UPDATE_VERSION() {
 }
 
 #UPDATE_VERSION "软件包名" "测试版，true，可选，默认为否"
-UPDATE_VERSION "sing-box"
+#UPDATE_VERSION "sing-box"
 #UPDATE_VERSION "tailscale"
