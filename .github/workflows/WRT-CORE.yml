@@ -187,15 +187,15 @@ jobs:
 
           make -j$(nproc) || make -j1 V=s
 
-      - name: 机器信息 
+      - name: 服务器信息 
         run: |
           cd ./wrt/
 
-          echo "======================="
+          echo "========CPU信息========="
           lscpu | grep -E "name|Core|Thread"
-          echo "======================="
+          echo "========硬盘信息 ======="
           df -h
-          echo "======================="
+          echo "=====目录和文件信息======"
           du -h --max-depth=1
           echo "======================="
 
