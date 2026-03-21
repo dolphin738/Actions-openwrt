@@ -78,8 +78,8 @@ UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 UPDATE_PACKAGE "rtp2httpd" "stackia/rtp2httpd" "main" "" "luci-app-rtp2httpd"
 UPDATE_PACKAGE "dolphin738" "dolphin738/op-packages" "main" "" "luci-app-wrtbwmon  wrtbwmon luci-app-turboacc fast-classifier shortcut-fe luci-app-taskplan luci-app-timedreboot"
 FILE_LIST=("luci-app-wrtbwmon" "wrtbwmon" "luci-app-turboacc" "shortcut-fe" "luci-app-taskplan" "luci-app-timedreboot")
-mkdir -p files/etc/config/
-mv -f op-packages/files/etc/config/kucat files/etc/config/
+#mkdir -p files/etc/config/
+#mv -f op-packages/files/etc/config/kucat files/etc/config/
 for N in "${FILE_LIST[@]}"; do
 	mv -f op-packages/$N ./ 
 done
