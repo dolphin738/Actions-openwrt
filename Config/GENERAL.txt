@@ -1,5 +1,8 @@
 #增加插件
 CONFIG_PACKAGE_luci-app-upnp=y
+#增加主题
+CONFIG_PACKAGE_luci-theme-argon=y
+CONFIG_PACKAGE_luci-app-argon-config=y
 #参数调整
 CONFIG_CCACHE=y
 CONFIG_DEVEL=y
