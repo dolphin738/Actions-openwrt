@@ -14,8 +14,8 @@ jobs:
   cleanup:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Projects
+      - name: 查看项目
         uses: actions/checkout@main
 
-      - name: Cache Clean
+      - name: 清理缓存
         run: gh cache delete --all
