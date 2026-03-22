@@ -98,7 +98,7 @@ jobs:
       - name: 克隆代码
         run: |
           git clone --depth=1 --single-branch --branch $WRT_BRANCH $WRT_REPO ./wrt/ && ls ./wrt
-          curl -L -o bin.tar.bz2 https://github.com/dolphin738/Actions-openwrt2/releases/download/jdcloud_re-ss-01-dolphin738-openwrt-25.12-26.03.22-11.23.19/packages.tar.bz2 && tar -xjvf bin.tar.bz2 -C ./wrt/
+          curl -L -o bin.tar.bz2 https://github.com/dolphin738/Actions-openwrt2/releases/download/jdcloud_re-ss-01-dolphin738-openwrt-25.12-26.03.22-11.23.19/packages.tar.bz2 && tar -xjvf bin.tar.bz2 -C ./wrt/ && ls ./wrt
 
           cd ./wrt/ && echo "WRT_HASH=$(git log -1 --pretty=format:'%h')" >> $GITHUB_ENV
 
