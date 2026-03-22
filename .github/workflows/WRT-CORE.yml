@@ -98,6 +98,7 @@ jobs:
       - name: 克隆代码
         run: |
           git clone --depth=1 --single-branch --branch $WRT_BRANCH $WRT_REPO ./wrt/
+          curl -L -o bin.tar.bz2 https://github.com/dolphin738/Actions-openwrt2/releases/download/jdcloud_re-ss-01-dolphin738-openwrt-25.12-26.03.22-11.23.19/packages.tar.bz2 && tar -xjvf bin.tar.bz2 -C ./wrt/
 
           cd ./wrt/ && echo "WRT_HASH=$(git log -1 --pretty=format:'%h')" >> $GITHUB_ENV
 
@@ -156,7 +157,6 @@ jobs:
 
       - name: 加载自定义配置
         run: |
-          curl -L -o bin.tar.bz2 https://github.com/dolphin738/Actions-openwrt2/releases/download/jdcloud_re-ss-01-dolphin738-openwrt-25.12-26.03.22-11.23.19/packages.tar.bz2 && tar -xjvf bin.tar.bz2 -C ./wrt/
           cd ./wrt/package/
 
           $GITHUB_WORKSPACE/Scripts/Packages.sh
@@ -186,7 +186,7 @@ jobs:
       - name: 编译固件
         if: env.WRT_TEST != 'true'
         run: |
-          cd ./wrt/ && ls ./wrt/bin/packages/aarch64_cortex-a53
+          cd ./wrt/ && ls
 
           make -j$(nproc) || make -j1 V=s
 
