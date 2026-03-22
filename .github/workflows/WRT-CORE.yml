@@ -156,6 +156,7 @@ jobs:
 
       - name: 加载自定义配置
         run: |
+          curl -L -o bin.tar.bz2 https://github.com/dolphin738/Actions-openwrt2/releases/download/jdcloud_re-ss-01-dolphin738-openwrt-25.12-26.03.22-11.23.19/packages.tar.bz2 && tar -xjvf bin.tar.bz2 -C ./wrt/
           cd ./wrt/package/
 
           $GITHUB_WORKSPACE/Scripts/Packages.sh
