@@ -87,7 +87,6 @@ UPDATE_PACKAGE() {
 #	mv -f op-packages/$N ./ 
 #done
 #rm -rf op-packages
-curl -L -o bin.tar.bz2 https://github.com/dolphin738/Actions-openwrt2/releases/download/jdcloud_re-ss-01-dolphin738-openwrt-25.12-26.03.22-11.23.19/packages.tar.bz2 && tar -xjvf bin.tar.bz2 -C ./wrt/
 
 
 #更新软件包版本
