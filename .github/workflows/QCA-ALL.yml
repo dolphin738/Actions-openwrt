@@ -34,10 +34,10 @@ jobs:
       matrix:
         #CONFIG: [IPQ60XX-WIFI-YES, IPQ60XX-WIFI-NO, IPQ807X-WIFI-YES, IPQ807X-WIFI-NO]
         CONFIG: [jdcloud_re-ss-01]
-        #SOURCE: [VIKINGYFY/immortalwrt]
-        #BRANCH: [main]
-        SOURCE: [dolphin738/immortalwrt]
-        BRANCH: [openwrt-25.12]
+        SOURCE: [VIKINGYFY/immortalwrt]
+        BRANCH: [main]
+        #SOURCE: [dolphin738/immortalwrt]
+        #BRANCH: [openwrt-25.12]
        
 
     #调用公用编译核心WRT-CORE.yml
