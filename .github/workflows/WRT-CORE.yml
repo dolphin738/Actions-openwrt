@@ -186,7 +186,7 @@ jobs:
       - name: 编译固件
         if: env.WRT_TEST != 'true'
         run: |
-          cd ./wrt/ && ls /bin
+          cd ./wrt/ && ls
 
           make -j$(nproc) || make -j1 V=s
 
