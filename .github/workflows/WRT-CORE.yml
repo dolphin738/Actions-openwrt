@@ -155,6 +155,7 @@ jobs:
       - name: 更新Feeds
         run: |
           cd ./wrt/
+          echo 'src-git apk https://github.com/dolphin738/op-packages.git;apk' >>feeds.conf.default
 
           ./scripts/feeds update -a
           ./scripts/feeds install -a
