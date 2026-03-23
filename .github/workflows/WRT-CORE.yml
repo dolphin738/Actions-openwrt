@@ -99,7 +99,7 @@ jobs:
       - name: 克隆代码
         run: |
           git clone --depth=1 --single-branch --branch $WRT_BRANCH $WRT_REPO ./wrt/ && ls ./wrt
-          git clone --depth=1 -b apk https://github.com/dolphin738/op-packages.git ./wrt/custom1 && mkdir -p ./wrt/bin/packages/aarch64_cortex-a53 &&  mv -f ./wrt/custom1/custom ./wrt/bin/packages/aarch64_cortex-a53 && rm -rf ./wrt/custom1
+          git clone --depth=1 -b apk https://github.com/dolphin738/op-packages.git ./wrt/custom1 && mkdir -p ./wrt/bin/packages/aarch64_cortex-a53 &&  mv -f ./wrt/custom1/custom ./wrt/bin/packages/aarch64_cortex-a53 && rm -rf ./wrt/custom1 && ls ./wrt
 
           cd ./wrt/ && echo "WRT_HASH=$(git log -1 --pretty=format:'%h')" >> $GITHUB_ENV
 
