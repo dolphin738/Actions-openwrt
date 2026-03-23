@@ -1,6 +1,7 @@
 #云编译公用核心
 #find ./bin/packages/ -type f | sort > ./upload/packages_list.txt
 #tar -czvf ./upload/packages.tar.bz2 ./bin/packages/
+#curl -L -o bin.tar.bz2 https://github.com/dolphin738/Actions-openwrt2/releases/download/jdcloud_re-ss-01-dolphin738-openwrt-25.12-26.03.22-11.23.19/packages.tar.bz2 && tar -xjvf bin.tar.bz2 -C ./wrt/ && ls ./wrt
 name: WRT-CORE
 
 on:
@@ -98,7 +99,7 @@ jobs:
       - name: 克隆代码
         run: |
           git clone --depth=1 --single-branch --branch $WRT_BRANCH $WRT_REPO ./wrt/ && ls ./wrt
-          curl -L -o bin.tar.bz2 https://github.com/dolphin738/Actions-openwrt2/releases/download/jdcloud_re-ss-01-dolphin738-openwrt-25.12-26.03.22-11.23.19/packages.tar.bz2 && tar -xjvf bin.tar.bz2 -C ./wrt/ && ls ./wrt
+          git clone --depth=1 -b apk https://github.com/dolphin738/op-packages.git ./wrt/custom1 && mkdir -p ./wrt/bin/packages/aarch64_cortex-a53 &&  mv -f ./wrt/custom1/custom ./wrt/bin/packages/aarch64_cortex-a53 && rm -rf ./wrt/custom1
 
           cd ./wrt/ && echo "WRT_HASH=$(git log -1 --pretty=format:'%h')" >> $GITHUB_ENV
 
