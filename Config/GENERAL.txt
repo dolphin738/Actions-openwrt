@@ -1,3 +1,13 @@
+#Web服务器调整
+#----------uhttpd------------------
+CONFIG_PACKAGE_uhttpd=y
+CONFIG_PACKAGE_uhttpd-mod-ubus=y
+#----------nginx------------------
+CONFIG_PACKAGE_luci-nginx=n
+CONFIG_PACKAGE_nginx-mod-luci=n
+CONFIG_PACKAGE_nginx-mod-ubus=n
+CONFIG_PACKAGE_nginx-ssl=n
+CONFIG_PACKAGE_nginx-ssl-util=n
 #增加插件
 CONFIG_PACKAGE_luci-app-upnp=y
 #增加主题
