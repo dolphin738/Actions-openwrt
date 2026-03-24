@@ -155,7 +155,7 @@ jobs:
       - name: 更新Feeds
         run: |
           cd ./wrt/
-          echo 'src-git sqm_scripts_nss https://github.com/JuliusBairaktaris/sqm-scripts-nss.git' >>feeds.conf.default
+          sed -i 's|https://github.com/qosmio/sqm-scripts-nss.git|https://github.com/JuliusBairaktaris/sqm-scripts-nss.git|g' feeds.conf.default
 
           ./scripts/feeds update -a
           ./scripts/feeds install -a
