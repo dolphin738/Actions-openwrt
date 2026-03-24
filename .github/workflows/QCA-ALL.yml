@@ -37,8 +37,10 @@ jobs:
       matrix:
         #CONFIG: [IPQ60XX-WIFI-YES, IPQ60XX-WIFI-NO, IPQ807X-WIFI-YES, IPQ807X-WIFI-NO]
         CONFIG: [jdcloud_re-ss-01]
-        SOURCE: [VIKINGYFY/immortalwrt]
-        BRANCH: [main]
+        #SOURCE: [VIKINGYFY/immortalwrt]
+        #BRANCH: [main]
+        SOURCE: [LiBwrt/openwrt-6.x]
+        BRANCH: [main-nss]
         #SOURCE: [dolphin738/immortalwrt]
         #BRANCH: [master]
        
