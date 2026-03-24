@@ -1,3 +1,5 @@
+#包管理器
+CONFIG_USE_APK=n
 #Web服务器调整
 #----------uhttpd------------------
 CONFIG_PACKAGE_uhttpd=y
