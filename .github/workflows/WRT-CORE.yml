@@ -155,7 +155,7 @@ jobs:
       - name: 更新Feeds
         run: |
           cd ./wrt/
-          echo 'src-git apk https://github.com/dolphin738/op-packages.git;apk' >>feeds.conf.default
+          echo 'src-git sqm_scripts_nss https://github.com/JuliusBairaktaris/sqm-scripts-nss.git' >>feeds.conf.default
 
           ./scripts/feeds update -a
           ./scripts/feeds install -a
