@@ -191,7 +191,7 @@ jobs:
       - name: 编译固件
         if: env.WRT_TEST != 'true'
         run: |
-          cd ./wrt/ && ls
+          cd ./wrt/
 
           make -j$(nproc) || make -j1 V=s
 
@@ -212,9 +212,7 @@ jobs:
           cd ./wrt/ && mkdir ./upload/
 
           cp -f ./.config ./upload/Config-"$WRT_CONFIG"-"$WRT_INFO"-"$WRT_BRANCH"-"$WRT_DATE".txt
-          find ./bin/targets/ -type f | sort > ./upload/targets_list.txt
-          tar -czvf ./upload/packages.tar.gz ./bin/packages/
-          tar -czvf ./upload/targets.tar.gz ./bin/targets/
+          tar -czvf ./upload/bin.tar.gz ./bin/
           
           if [[ $WRT_TEST != 'true' ]]; then
             echo "WRT_KVER=$(find ./bin/targets/ -type f -name "*.manifest" -exec grep -oP '^kernel - \K[\d\.]+' {} \;)" >> $GITHUB_ENV
