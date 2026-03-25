@@ -35,10 +35,12 @@ jobs:
       fail-fast: false
       #max-parallel: 3
       matrix:
-        CONFIG: [MEDIATEK, ROCKCHIP, X86]
-        SOURCE: [VIKINGYFY/immortalwrt]
-        BRANCH: [owrt]
-
+        CONFIG: [RedmiAX6S, X86]
+        #SOURCE: [VIKINGYFY/immortalwrt]
+        #BRANCH: [owrt]
+        SOURCE: [immortalwrt/immortalwrt]
+        BRANCH: [openwrt-25.12]
+        
     #调用公用编译核心WRT-CORE.yml
     uses: ./.github/workflows/WRT-CORE.yml
     with:
