@@ -85,11 +85,12 @@ UPDATE_PACKAGE "openwrt-bandix" "timsaya/openwrt-bandix" "main"
 UPDATE_PACKAGE "luci-app-bandix" "timsaya/luci-app-bandix" "main"
 FILE_LIST=("luci-app-wrtbwmon" "wrtbwmon" "luci-app-turboacc" "shortcut-fe" "luci-app-taskplan" "luci-app-timedreboot")
 #mkdir -p files/etc/config/
-cp -rf op-packages/files/etc/ files/
 for N in "${FILE_LIST[@]}"; do
 	mv -f op-packages/$N ./ 
 done
+cp -rf op-packages/files/ files/
 rm -rf op-packages
+
 
 
 #更新软件包版本
