@@ -86,9 +86,10 @@ UPDATE_PACKAGE "luci-app-bandix" "timsaya/luci-app-bandix" "main"
 FILE_LIST=("luci-app-wrtbwmon" "wrtbwmon" "luci-app-turboacc" "shortcut-fe" "luci-app-taskplan" "luci-app-timedreboot")
 #mkdir -p files/etc/config/
 for N in "${FILE_LIST[@]}"; do
-	mv -f op-packages/$N ./ 
+	mv -f op-packages/luci/$N ./ 
 done
 cp -rf op-packages/files/ files/
+rm -rf files/etc/opkg/
 rm -rf op-packages
 
 
