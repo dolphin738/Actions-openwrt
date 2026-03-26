@@ -89,7 +89,7 @@ for N in "${FILE_LIST[@]}"; do
 	mv -f op-packages/luci/$N ./ 
 done
 cp -rf op-packages/files/ files/
-rm -rf files/etc/opkg/
+rm -rf files/etc/opkg/distfeeds.conf
 rm -rf op-packages
 
 
