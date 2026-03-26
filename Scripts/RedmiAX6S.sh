@@ -3,4 +3,4 @@
 # Copyright (C) 2026 VIKINGYFY
 
 #配置文件修改
-echo "CONFIG_PACKAGE_luci-app-$WRT_THEME-config=y" >> ./.config
+echo "CONFIG_TARGET_mediatek_mt7622_DEVICE_xiaomi_redmi-router-ax6s=y" >> ./.config
