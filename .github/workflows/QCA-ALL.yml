@@ -53,12 +53,12 @@ jobs:
       matrix:
         #CONFIG: [IPQ60XX-WIFI-YES, IPQ60XX-WIFI-NO, IPQ807X-WIFI-YES, IPQ807X-WIFI-NO]
         CONFIG: [jdcloud_re-ss-01]
-        SOURCE: 
-          - ${{ github.event.inputs.SOURCE_type }}
-        BRANCH:
-          - ${{ github.event.inputs.BRANCH_type }}
-        #SOURCE: [LiBwrt/openwrt-6.x]
-        #BRANCH: [main-nss]
+        #SOURCE: 
+          #- ${{ github.event.inputs.SOURCE_type }}
+        #BRANCH:
+          #- ${{ github.event.inputs.BRANCH_type }}
+        SOURCE: [LiBwrt/openwrt-6.x]
+        BRANCH: [main-nss]
        
 
     #调用公用编译核心WRT-CORE.yml
