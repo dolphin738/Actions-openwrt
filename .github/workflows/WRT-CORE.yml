@@ -219,7 +219,7 @@ jobs:
               exit 1
             fi
           fi
-
+          sed -i '/^[[:space:]]*$/d' ./.config
           make defconfig -j$(nproc) && make clean -j$(nproc)
 
       - name: 下载软件包
