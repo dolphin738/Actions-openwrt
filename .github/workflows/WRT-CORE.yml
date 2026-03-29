@@ -174,9 +174,9 @@ jobs:
             echo "✅ 检测到 LiBwrt/openwrt-6.x，正在执行 QCA-feed.sh..."
             
             # 检查脚本是否存在
-            if [ -f "./QCA-feed.sh" ]; then
-              chmod +x ./QCA-feed.sh
-              ./QCA-feed.sh
+            if [ -f "Scripts/QCA-feed.sh" ]; then
+              chmod +x Scripts/QCA-feed.sh
+              Scripts/QCA-feed.sh
             else
               echo "❌ 错误：当前目录下未找到 QCA-feed.sh 脚本"
               exit 1
