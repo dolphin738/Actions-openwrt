@@ -218,6 +218,7 @@ jobs:
               echo "❌ 错误：找不到脚本 RedmiAX6S.sh"
               exit 1
             fi
+          fi
 
           make defconfig -j$(nproc) && make clean -j$(nproc)
 
