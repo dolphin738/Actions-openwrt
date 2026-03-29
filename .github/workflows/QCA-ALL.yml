@@ -14,7 +14,7 @@ on:
   #手动编译
   workflow_dispatch:
     inputs:
-      build_type:
+      SOURCE_type:
         description: '📦 选择源码'
         required: true
         default: 'VIKINGYFY/immortalwrt'
@@ -22,6 +22,14 @@ on:
         options:
           - VIKINGYFY/immortalwrt
           - LiBwrt/openwrt-6.x
+      BRANCH_type:
+        description: '📦 选择分支'
+        required: true
+        default: 'main'
+        type: choice
+        options:
+          - main
+          - main-nss
       PACKAGE:
         description: '手动调整插件包，多个请用\n符号隔开。'
         required: false
@@ -45,8 +53,8 @@ jobs:
       matrix:
         #CONFIG: [IPQ60XX-WIFI-YES, IPQ60XX-WIFI-NO, IPQ807X-WIFI-YES, IPQ807X-WIFI-NO]
         CONFIG: [jdcloud_re-ss-01]
-        SOURCE: ${{ github.event.inputs.build_type }}
-        BRANCH: [main]
+        SOURCE: ${{ github.event.inputs.SOURCE_type }}
+        BRANCH: ${{ github.event.inputs.BRANCH_type }}
         #SOURCE: [LiBwrt/openwrt-6.x]
         #BRANCH: [main-nss]
        
