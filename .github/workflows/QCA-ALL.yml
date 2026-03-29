@@ -25,10 +25,10 @@ on:
       PACKAGE:
         description: '手动调整插件包，多个请用\n符号隔开。'
         required: false
+        default: 'false'
         type: string
       TEST:
         description: '仅输出配置文件，不编译固件。'
-        default: 'false'
         required: false
         type: boolean 
 
@@ -45,7 +45,7 @@ jobs:
       matrix:
         #CONFIG: [IPQ60XX-WIFI-YES, IPQ60XX-WIFI-NO, IPQ807X-WIFI-YES, IPQ807X-WIFI-NO]
         CONFIG: [jdcloud_re-ss-01]
-        SOURCE: [inputs.build_type]
+        SOURCE: ${{ github.event.inputs.build_type }}
         BRANCH: [main]
         #SOURCE: [LiBwrt/openwrt-6.x]
         #BRANCH: [main-nss]
