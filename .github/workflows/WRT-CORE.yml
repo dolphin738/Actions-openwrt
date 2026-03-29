@@ -218,9 +218,6 @@ jobs:
               echo "❌ 错误：找不到脚本 RedmiAX6S.sh"
               exit 1
             fi
-          else
-            echo "ℹ️ 配置不匹配 ($WRT_CONFIG)，跳过执行。"
-          fi 
 
           make defconfig -j$(nproc) && make clean -j$(nproc)
 
