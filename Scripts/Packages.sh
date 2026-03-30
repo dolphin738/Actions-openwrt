@@ -88,8 +88,8 @@ FILE_LIST=("luci-app-wrtbwmon" "wrtbwmon" "luci-app-turboacc" "shortcut-fe" "luc
 for N in "${FILE_LIST[@]}"; do
 	mv -f op-packages/luci/$N ./ 
 done
-cp -rf op-packages/files/ ./
-rm -rf files/etc/opkg/distfeeds.conf
+#cp -rf op-packages/files/ ./
+#rm -rf files/etc/opkg/distfeeds.conf
 rm -rf op-packages
 
 
