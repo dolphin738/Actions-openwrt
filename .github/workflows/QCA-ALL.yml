@@ -53,14 +53,14 @@ jobs:
       matrix:
         #CONFIG: [IPQ60XX-WIFI-YES, IPQ60XX-WIFI-NO, IPQ807X-WIFI-YES, IPQ807X-WIFI-NO]
         CONFIG: [jdcloud_re-ss-01]
-        #SOURCE: 
-          #- ${{ github.event.inputs.SOURCE_type }}
-        #BRANCH:
-          #- ${{ github.event.inputs.BRANCH_type }}
+        SOURCE: 
+          - ${{ github.event.inputs.SOURCE_type }}
+        BRANCH:
+          - ${{ github.event.inputs.BRANCH_type }}
         #SOURCE: [LiBwrt/openwrt-6.x]
         #BRANCH: [main-nss]
-        SOURCE: [VIKINGYFY/immortalwrt]
-        BRANCH: [main]
+        #SOURCE: [VIKINGYFY/immortalwrt]
+        #BRANCH: [main]
 
     #调用公用编译核心WRT-CORE.yml
     uses: ./.github/workflows/WRT-CORE.yml
