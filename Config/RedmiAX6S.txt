@@ -43,7 +43,7 @@ CONFIG_PACKAGE_tuic-client=n
 CONFIG_PACKAGE_v2ray-plugin=n
 CONFIG_PACKAGE_xray-core=n
 #增加插件
-CONFIG_PACKAGE_luci-app-netspeedtest=n
+CONFIG_PACKAGE_luci-app-netspeedtest=m
 CONFIG_PACKAGE_luci-app-easytier=y
 CONFIG_PACKAGE_luci-app-timedreboot=y
 CONFIG_PACKAGE_luci-app-quickfile=y
