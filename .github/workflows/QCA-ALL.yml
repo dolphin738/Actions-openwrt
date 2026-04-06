@@ -22,6 +22,7 @@ on:
         options:
           - VIKINGYFY/immortalwrt
           - LiBwrt/openwrt-6.x
+          - immortalwrt/immortalwrt
       BRANCH_type:
         description: '📦 选择分支'
         required: true
