@@ -30,6 +30,7 @@ on:
         options:
           - main
           - main-nss
+          - openwrt-25.12
       PACKAGE:
         description: '手动调整插件包，多个请用\n符号隔开。'
         required: false
