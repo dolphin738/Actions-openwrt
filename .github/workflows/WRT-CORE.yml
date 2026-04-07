@@ -170,20 +170,20 @@ jobs:
         run: |
           cd ./wrt/
                     # 判断变量是否完全匹配
-          #if [ "$WRT_SOURCE" = "LiBwrt/openwrt-6.x" ]; then
-            #echo "✅ 检测到 LiBwrt/openwrt-6.x，正在执行 QCA-feed.sh..."
+          if [ "$WRT_SOURCE" = "LiBwrt/openwrt-6.x" ]; then
+            echo "✅ 检测到 LiBwrt/openwrt-6.x，正在执行 QCA-feed.sh..."
             
             # 检查脚本是否存在
-            #if [ -f "$GITHUB_WORKSPACE/Scripts/QCA-feed.sh" ]; then
+            if [ -f "$GITHUB_WORKSPACE/Scripts/QCA-feed.sh" ]; then
               chmod +x $GITHUB_WORKSPACE/Scripts/QCA-feed.sh
               $GITHUB_WORKSPACE/Scripts/QCA-feed.sh
-            #else
-              #echo "❌ 错误：当前目录下未找到 QCA-feed.sh 脚本"
-              #exit 1
-            #fi
-          #else
-            #echo "ℹ️ 变量不匹配 ($WRT_SOURCE)，跳过 QCA-feed.sh 执行。"
-          #fi
+            else
+              echo "❌ 错误：当前目录下未找到 QCA-feed.sh 脚本"
+              exit 1
+            fi
+          else
+            echo "ℹ️ 变量不匹配 ($WRT_SOURCE)，跳过 QCA-feed.sh 执行。"
+          fi
 
           ./scripts/feeds update -a
           ./scripts/feeds install -a
