@@ -185,8 +185,8 @@ jobs:
             echo "ℹ️ 变量不匹配 ($WRT_SOURCE)，跳过 QCA-feed.sh 执行。"
           fi
           
-          chmod +x $GITHUB_WORKSPACE/Scripts/feed.sh
-          $GITHUB_WORKSPACE/Scripts/feed.sh
+          #chmod +x $GITHUB_WORKSPACE/Scripts/feed.sh
+          #$GITHUB_WORKSPACE/Scripts/feed.sh
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
