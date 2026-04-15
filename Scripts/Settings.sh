@@ -11,8 +11,20 @@ sed -i "s/luci-theme-bootstrap/luci-theme-$WRT_THEME/g" $(find ./feeds/luci/coll
 #修改immortalwrt.lan关联IP
 sed -i "s/192\.168\.[0-9]*\.[0-9]*/$WRT_IP/g" $(find ./feeds/luci/modules/luci-mod-system/ -type f -name "flash.js")
 #添加编译日期标识
-sed -i "s/(\(luciversion || ''\))/(\1) + (' \/ $WRT_MARK-$WRT_DATE')/g" $(find ./feeds/luci/modules/luci-mod-status/ -type f -name "10_system.js")
+#sed -i "s/(\(luciversion || ''\))/(\1) + (' \/ $WRT_MARK-$WRT_DATE')/g" $(find ./feeds/luci/modules/luci-mod-status/ -type f -name "10_system.js")
 #sed -i "s/(\(luciversion || ''\))/(\1) + (' \/ <a href=\"https:\/\/github.com\/dolphin738\/Actions-openwrt\/releases\" target=\"_blank\">$WRT_MARK-$WRT_DATE<\/a>')/g" $(find ./feeds/luci/modules/luci-mod-status/ -type f -name "10_system.js")
+sed -i "s#_('Firmware Version'), (L\.isObject(boardinfo\.release) ? boardinfo\.release\.description + ' / ' : '') + (luciversion || ''),# \
+            _('Firmware Version'),\n \
+            E('span', {}, [\n \
+                (L.isObject(boardinfo.release)\n \
+                ? boardinfo.release.description + ' / '\n \
+                : '') + (luciversion || '') + ' / ',\n \
+            E('a', {\n \
+                href: 'https://github.com/laipeng668/openwrt-ci-roc/releases',\n \
+                target: '_blank',\n \
+                rel: 'noopener noreferrer'\n \
+                }, [ 'Built by $WRT_MARK-$WRT_DATE' ])\n \
+            ]),#" $(find ./feeds/luci/modules/luci-mod-status/ -type f -name "10_system.js")
 
 WIFI_SH=$(find ./target/linux/{mediatek/filogic,qualcommax}/base-files/etc/uci-defaults/ -type f -name "*set-wireless.sh" 2>/dev/null)
 WIFI_UC="./package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc"
