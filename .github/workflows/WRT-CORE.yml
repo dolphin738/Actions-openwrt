@@ -185,7 +185,21 @@ jobs:
             echo "ℹ️ 变量不匹配 ($WRT_SOURCE)，跳过 QCA-feed.sh 执行。"
           fi
           
-          chmod +x $GITHUB_WORKSPACE/Scripts/feed.sh && $GITHUB_WORKSPACE/Scripts/feed.sh
+          if [ "$WRT_BRANCH" = "openwrt-25.12" ]; then
+            echo "✅ 检测到 openwrt-25.12，正在执行 feed.sh..."
+            
+            # 检查脚本是否存在
+            if [ -f "$GITHUB_WORKSPACE/Scripts/feed.sh" ]; then
+              chmod +x $GITHUB_WORKSPACE/Scripts/feed.sh
+              $GITHUB_WORKSPACE/Scripts/feed.sh
+            else
+              echo "❌ 错误：当前目录下未找到 feed.sh 脚本"
+              exit 1
+            fi
+          else
+            echo "ℹ️ 变量不匹配 ($WRT_SOURCE)，跳过 feed.sh 执行。"
+          fi
+          
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
