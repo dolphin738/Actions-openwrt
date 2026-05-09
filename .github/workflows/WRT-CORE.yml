@@ -279,7 +279,7 @@ jobs:
               NAME=$(basename $FILE | cut -d '.' -f 1 | grep -io "\($WRT_TARGET\).*")
               NEW_FILE="$WRT_INFO"-"$WRT_BRANCH"-"$WRT_WIFI"-"$NAME"-"$WRT_DATE"."$EXT"
               mv -f $FILE ./upload/$NEW_FILE
-              tar -czvf ./upload/$NEW_FILE.tar.gz ./upload/$NEW_FILE
+              tar -czvf ./upload/$NEW_FILE.tar.gz ./upload/$NEW_FILE && rm -rf ./upload/$NEW_FILE
             done
 
             find ./bin/targets/ -type f -exec mv -f {} ./upload/ \;
