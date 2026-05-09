@@ -35,7 +35,7 @@ jobs:
       fail-fast: false
       #max-parallel: 3
       matrix:
-        CONFIG: [RedmiAX6S,X86.txt]
+        CONFIG: [RedmiAX6S, X86.txt]
         #SOURCE: [VIKINGYFY/immortalwrt]
         #BRANCH: [owrt]
         SOURCE: [immortalwrt/immortalwrt]
