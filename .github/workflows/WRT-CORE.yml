@@ -185,7 +185,7 @@ jobs:
             echo "ℹ️ 变量不匹配 ($WRT_SOURCE)，跳过 QCA-feed.sh 执行。"
           fi
           
-          if [ "$WRT_BRANCH" = "openwrt-25.12" ]; then
+          if [ "$WRT_BRANCH" = "master" ]; then
             echo "✅ 检测到 openwrt-25.12，跳过 feed.sh 执行"
           else
                         # 检查脚本是否存在
