@@ -79,11 +79,11 @@ UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main"
 UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-timewol luci-app-wolplus"
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 UPDATE_PACKAGE "rtp2httpd" "stackia/rtp2httpd" "main" "" "luci-app-rtp2httpd"
-UPDATE_PACKAGE "dolphin738" "dolphin738/op-packages" "main" "" "luci-app-wrtbwmon  wrtbwmon luci-app-turboacc fast-classifier shortcut-fe luci-app-taskplan luci-app-timedreboot luci-app-netspeedtest homebox ookla-speedtest luci-app-adguardhome luci-app-socat"
+UPDATE_PACKAGE "dolphin738" "dolphin738/op-packages" "main" "" "luci-app-wrtbwmon  wrtbwmon luci-app-turboacc fast-classifier shortcut-fe luci-app-taskplan luci-app-timedreboot luci-app-netspeedtest homebox ookla-speedtest luci-app-adguardhome luci-app-socat luci-app-dockerman luci-lib-docker dockerd"
 UPDATE_PACKAGE "luci-app-netwizard" "sirpdboy/luci-app-netwizard" "main"
 UPDATE_PACKAGE "openwrt-bandix" "timsaya/openwrt-bandix" "main"
 UPDATE_PACKAGE "luci-app-bandix" "timsaya/luci-app-bandix" "main"
-FILE_LIST=("luci-app-wrtbwmon" "wrtbwmon" "luci-app-turboacc" "shortcut-fe" "luci-app-taskplan" "luci-app-timedreboot" "luci-app-netspeedtest" "homebox" "ookla-speedtest" "luci-app-adguardhome" "luci-app-socat")
+FILE_LIST=("luci-app-wrtbwmon" "wrtbwmon" "luci-app-turboacc" "shortcut-fe" "luci-app-taskplan" "luci-app-timedreboot" "luci-app-netspeedtest" "homebox" "ookla-speedtest" "luci-app-adguardhome" "luci-app-socat" "luci-app-dockerman" "luci-lib-docker" "dockerd")
 #mkdir -p files/etc/config/
 for N in "${FILE_LIST[@]}"; do
 	mv -f op-packages/luci/$N ./ 
