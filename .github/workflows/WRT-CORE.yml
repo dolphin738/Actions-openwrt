@@ -215,7 +215,6 @@ jobs:
 
           if [[ "${WRT_CONFIG,,}" == *"test"* ]]; then
             cat $GITHUB_WORKSPACE/Config/$WRT_CONFIG.txt >> .config
-            sed -i 's/CONFIG_PACKAGE_luci-i18n-adguardhome-zh-cn=y/# CONFIG_PACKAGE_luci-i18n-adguardhome-zh-cn is not set/' .config
           else
             cat $GITHUB_WORKSPACE/Config/$WRT_CONFIG.txt $GITHUB_WORKSPACE/Config/GENERAL.txt >> .config
           fi
@@ -235,6 +234,7 @@ jobs:
           fi
 
           make defconfig -j$(nproc) && make clean -j$(nproc)
+          sed -i 's/CONFIG_PACKAGE_luci-i18n-adguardhome-zh-cn=y/# CONFIG_PACKAGE_luci-i18n-adguardhome-zh-cn is not set/' .config
 
       - name: 下载软件包
         if: env.WRT_TEST != 'true'
