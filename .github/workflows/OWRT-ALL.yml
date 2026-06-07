@@ -39,6 +39,7 @@ jobs:
         CONFIG: [X86]
         #SOURCE: [VIKINGYFY/immortalwrt]
         #BRANCH: [owrt]
+        #SOURCE: [dolphin738/immortalwrt]
         SOURCE: [immortalwrt/immortalwrt]
         BRANCH: [openwrt-25.12]
         #BRANCH: [master]
